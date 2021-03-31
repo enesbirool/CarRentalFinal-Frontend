@@ -1,0 +1,7 @@
+<form [formGroup]="colorAddForm">
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Add Color</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Color Name" formControlName = "colorName">
+        <button (click)="add()" type="button" class="btn btn-success mt-3">Add</button>
+    </div>
+</form>

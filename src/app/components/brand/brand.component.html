@@ -1,0 +1,12 @@
+<label class="form-label">Brands</label>
+
+  <div>
+    <select [(ngModel)]="selectedBrand" class="form-select" aria-label="Disabled select example">
+      <option [value]="brand.brandId" *ngFor="let brand of brands">{{brand.brandName}}</option>
+    </select>
+  </div>
+
+  <div class="mt-3 d-flex justify-content-end">
+    <button routerLink="/cars/brand/{{selectedBrand}}" type="button" class="btn btn-success me-3">Filter</button>
+    <button routerLink="/cars" type="button" class="btn btn-warning">Clear</button>
+  </div>

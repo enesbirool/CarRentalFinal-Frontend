@@ -1,0 +1,30 @@
+<div class="col-md-7 mx-auto">
+    <div class="card-body rounded border border-5" style="background-color: whitesmoke; position: relative;">
+      <form [formGroup]="cardForm">
+        <h5 class="card-title">Kredi kartı ile satın alma</h5>
+        <input type="text" formControlName="firstName" class="form-control" id="nameText" 
+        placeholder="First Name on the card" style="margin-top: 20px;">
+        <input type="text" formControlName="lastName" class="form-control" id="nameText" 
+        placeholder="Last Name on The Card" style="margin-top: 20px;">
+        <input type="number" formControlName="cardNumber" class="form-control" id="numberText" 
+        placeholder="Card Number" style="margin-top: 20px;">
+        <input type="number" formControlName="cvvNumber" class="form-control" id="cvvText" 
+        placeholder="Cvv" style="margin-top: 20px;">
+        <input type="date"formControlName="expireDate" class="form-control" id="numberText" 
+        placeholder="Expire Date" style="margin-top: 20px;">
+        <button type="button" class="btn btn-success mt-3" (click)="open(content)" data-toggle="modal" data-target="#exampleModal">Rent</button>
+      </form>
+      <ng-template #content let-modal >
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Do you want us to save your credit card information?</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Dont save click')">Do not save</button>
+          <button type="button" class="btn btn-outline-dark" (click)="save()">Save</button>
+        </div>
+      </ng-template>
+    </div>
+
+    
+
+</div>

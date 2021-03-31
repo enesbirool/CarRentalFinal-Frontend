@@ -1,0 +1,24 @@
+<form [formGroup]="carAddForm">
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Brand Id</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Brand Id" formControlName = "brandId">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Color Id</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Color Id" formControlName = "colorId">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Model Year</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Model Year" formControlName = "modelYear">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Daily Price</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Daily Price" formControlName = "dailyPrice">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Description</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Description" formControlName = "description">
+    </div>
+
+    <button (click)="add()" type="button" class="btn btn-success mt-3">Add</button>
+</form>
