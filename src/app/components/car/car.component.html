@@ -1,0 +1,38 @@
+<div *ngIf="dataLoaded == false" class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Search</label>
+  <input [(ngModel)]="filterText" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+</div>
+<button type="button" class="btn btn-success mb-2">Search</button>
+<div *ngIf="filterText.length>0" class="alert alert-success mt-2">
+  {{filterText}} is searched
+</div>
+
+
+<table *ngIf="dataLoaded == true" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Car Id</th>
+        <th scope="col">Brand Name</th>
+        <th scope="col">Color Name</th>
+        <th scope="col">Model Year</th>
+        <th scope="col">Daily Price</th>
+        <th scope="col">Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars | filterPipe:filterText">
+        <td>{{car.carId}}</td>
+        <td>{{car.brandName}}</td>
+        <td>{{car.colorName}}</td>
+        <td>{{car.modelYear}}</td>
+        <td>{{car.dailyPrice}}</td>
+        <td>{{car.description}}</td>
+        <td><button routerLink="/car-detail/{{car.carId}}" type="button" class="btn btn-success m-2">Details</button></td>
+      </tr>
+    </tbody>
+  </table>

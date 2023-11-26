@@ -1,0 +1,38 @@
+<tbody>
+    <tr>
+      <th scope="row">Brand</th>
+      <td>{{ car.brandName }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Car Id</th>
+      <td>{{ car.carId}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Renk</th>
+      <td>{{ car.colorName }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Model Year</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td>{{ car.description }}</td>
+    </tr>
+  </tbody>
+
+  <div class="mt-5">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Start Date</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="start-date" [(ngModel)]="startDate">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">End Date</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="end-date" [(ngModel)]="endDate">
+    </div>
+   </div>
+   <div *ngIf="checkIfDatesEntered()" class="alert alert-warning mt-3" role="alert">
+    Please enter rent and delivery dates
+  </div>
+  <button type="button" (click)="rent()" class="btn btn-success">Rent</button>
+  

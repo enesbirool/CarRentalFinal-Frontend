@@ -1,0 +1,28 @@
+<form [formGroup]="carUpdateForm">
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Car Id</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder={{car.carId}} formControlName = "carId">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Brand Id</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder={{car.brandId}} formControlName = "brandId">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Color Id</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder={{car.colorId}} formControlName = "colorId">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Model Year</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder={{car.modelYear}} formControlName = "modelYear">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Daily Price</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder={{car.dailyPrice}} formControlName = "dailyPrice">
+    </div>
+    <div class="mb-3 text-center">
+        <label for="exampleFormControlInput1" class="form-label">Description</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder={{car.description}} formControlName = "description">
+    </div>
+
+    <button (click)="update()" type="button" class="btn btn-warning mt-3">Update</button>
+</form>
